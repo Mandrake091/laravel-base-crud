@@ -34,7 +34,7 @@
                     <td>{{ $comic->description }}</td>
                     <td>{{ $comic->price }}</td>
                     <td>{{ $comic->sale_date }}</td>
-                    <td><img src="{{ $comic->thumb }}" alt=""></td>
+                    <td><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
                 </tr>
             @endforeach
 
