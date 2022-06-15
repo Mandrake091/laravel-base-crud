@@ -7,22 +7,26 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-6 d-flex flex-column">
 
-           
-            <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                            value="email@example.com">
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword">
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                    
                 </div>
+                   <button class="btn btn-warning w-25  align-self-center"><strong>Invia</strong></button>
             </div>
-             </div>
+         
         </div>
 
     </div>
