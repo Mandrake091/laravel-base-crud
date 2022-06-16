@@ -27,30 +27,22 @@
                         <a href="{{ route('comics.edit', $comic->id) }}">
                             <button class="btn btn-primary m-2">Modifica</button>
                         </a>
-                        <a href="{{ route('comics.destroy', $comic->id) }}">
-                            <button class="btn btn-danger m-2">Elimina</button>
-                        </a>
+
+                        <form action='{{ route('comics.destroy', $comic->id) }}' method="POST">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-2">Elimina</button>
+                        </form>
+
                     </td>
                     <td>{{ $comic->description }}</td>
-                    <td>{{ $comic->price }}</td>
+                    <td>{{ $comic->price }} €</td>
                     <td>{{ $comic->sale_date }}</td>
-                    <td><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
+                    <td><img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
                 </tr>
             @endforeach
 
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
             </tr>
         </tbody>
     </table>
-
-
 @endsection
