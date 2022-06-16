@@ -24,7 +24,7 @@
                         <td class="d-flex flex-column align-items-center">
                             <h6>{{ $comic->title }}</h6><br>
                             <a href="{{ route('comics.show', $comic->id) }}">
-                                <button class="btn btn-success m-2">Visualizza</button>
+                                <button  class="btn btn-success m-2">Visualizza</button>
                             </a>
                             <a href="{{ route('comics.edit', $comic->id) }}">
                                 <button class="btn btn-primary m-2">Modifica</button>
@@ -32,7 +32,7 @@
                             <form action='{{ route('comics.destroy', $comic->id) }}' method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button id="button" type="submit" class="btn btn-danger m-2">Elimina</button>
+                                <button onclick="return confirm('Sei sicuro di voler eliminare il file?')" id="button" type="submit" class="btn btn-danger m-2">Elimina</button>
                             </form>
                         </td>
                         <td>{{ $comic->description }}</td>
@@ -41,7 +41,6 @@
                         <td><img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
                     </tr>
                 @endforeach
-
                 </tr>
             </tbody>
         </table>
