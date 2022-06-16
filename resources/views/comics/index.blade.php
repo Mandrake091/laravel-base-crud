@@ -27,13 +27,11 @@
                         <a href="{{ route('comics.edit', $comic->id) }}">
                             <button class="btn btn-primary m-2">Modifica</button>
                         </a>
-
                         <form action='{{ route('comics.destroy', $comic->id) }}' method="POST">
                             @csrf
                             @method('DELETE')
-                                <button type="submit" class="btn btn-danger m-2">Elimina</button>
+                                <button id="button" type="submit" class="btn btn-danger m-2">Elimina</button>
                         </form>
-
                     </td>
                     <td>{{ $comic->description }}</td>
                     <td>{{ $comic->price }} €</td>
@@ -45,4 +43,6 @@
             </tr>
         </tbody>
     </table>
+    <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
 @endsection
+
