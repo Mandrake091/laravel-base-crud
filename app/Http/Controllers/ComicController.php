@@ -13,9 +13,16 @@ use function Symfony\Component\String\b;
 
 class ComicController extends Controller
 {
+    protected $validationRule = [
+        'title'=>'required|max:50',
+        'type' => 'required|max:20',
+        'description' => 'required|max:255'
+    ];
+
+
+    
     /**
      * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -43,6 +50,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->validationRule);
         $data = $request->all();
       
         $newComic = Comic::create($data);
@@ -96,6 +104,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate($this->validationRule);
         $data = $request->all();
         // $comic->title = $data['title'];
         // $comic->description = $data['description'];
