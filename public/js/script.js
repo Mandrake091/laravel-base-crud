@@ -4,24 +4,30 @@
 // var myModal = document.getElementById('myModal').addEventListener('shown.bs.modal')
 // var myInput = document.getElementById('myInput')
 
-console.log('ciaociao')
 
-const form = document.getElementById('form')
-const formAction = document.getElementById('form').action
-console.log(form)
+// function myfunction(e) {
+//     e.preventDefault();
+//     const el = document.getElementById(form);
+//     let text = document.getElementById(demo)
+//     if (confirm('Are you sure you want to continue') == true) {
+//         el.submit();
+//     } else {
+//         text.innerHTML = 'you canceled!'
+//     }
 
-formAction.preventDefault()
+//     let element = document.getElementById(button);
+//     if(element) element.addEventListener('click', myfunction)
 
-function start() {
+// }
 
-form.addEventListener('submit', (event) => {
+// function start() {
+
+// form.addEventListener('submit', (event) => {
     
-    event.preventDefault()
- })
+//     event.preventDefault()
+//  })
     
-}
-
-
+// }
 
 // var myModal = document.querySelectorAll('.btn-danger');
 // console.log(myModal)
